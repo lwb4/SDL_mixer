@@ -79,7 +79,7 @@
 		AAE8838A1F97321E007B6569 /* tables.h in Headers */ = {isa = PBXBuildFile; fileRef = AAE883731F97321E007B6569 /* tables.h */; };
 		AAE8838B1F97321E007B6569 /* mix.c in Sources */ = {isa = PBXBuildFile; fileRef = AAE883741F97321E007B6569 /* mix.c */; };
 		BE1FA8CD07AF96B2004B6283 /* SDL_mixer.h in Headers */ = {isa = PBXBuildFile; fileRef = 1014BAEA010A4B677F000001 /* SDL_mixer.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		BE1FA90207AF96B2004B6283 /* SDL2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE1FA8AE07AF95F7004B6283 /* SDL2.framework */; };
+		C077BFEF243D823100BFDE70 /* SDL2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C077BFEE243D823100BFDE70 /* SDL2.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -189,6 +189,7 @@
 		BE1FA90607AF96B2004B6283 /* SDL2_mixer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SDL2_mixer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BE1FA95407AF96B2004B6283 /* libSDL2_mixer.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libSDL2_mixer.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		BE1FA95807AF96B3004B6283 /* Create DMG */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "Create DMG"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C077BFEE243D823100BFDE70 /* SDL2.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SDL2.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F51BFB0101F724BE01D3D55B /* native_midi.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = native_midi.h; sourceTree = "<group>"; };
 		F59C710300D5CB5801000001 /* ReadMe.txt */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = text; path = ReadMe.txt; sourceTree = "<group>"; };
 		F59C710400D5CB5801000001 /* Welcome.txt */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = text; path = Welcome.txt; sourceTree = "<group>"; };
@@ -200,10 +201,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C077BFEF243D823100BFDE70 /* SDL2.framework in Frameworks */,
 				AAE2D4361F90416000057D25 /* AudioToolbox.framework in Frameworks */,
 				AA6442D3175B181D00A2125A /* AudioUnit.framework in Frameworks */,
 				AA6442D5175B185800A2125A /* CoreServices.framework in Frameworks */,
-				BE1FA90207AF96B2004B6283 /* SDL2.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -354,6 +355,7 @@
 		BE1FA8AC07AF95D4004B6283 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				C077BFEE243D823100BFDE70 /* SDL2.framework */,
 				BE1FA8AD07AF95DC004B6283 /* Linked Frameworks */,
 			);
 			name = Frameworks;
@@ -699,6 +701,13 @@
 					MUSIC_OPUS,
 					"OPUS_HEADER=\"<opusfile.h>\"",
 				);
+				HEADER_SEARCH_PATHS = (
+					../src/codecs,
+					../include,
+					"$(HEADER_SEARCH_PATHS_QUOTED)",
+					"$(HOME)/Library/Frameworks/SDL2.framework/Headers",
+					../../SDL/include,
+				);
 				INFOPLIST_FILE = "Info-Framework.plist";
 				INSTALL_PATH = "@rpath";
 				LD_RUNPATH_SEARCH_PATHS = "@loader_path/Frameworks";
@@ -747,6 +756,13 @@
 					MUSIC_FLAC,
 					MUSIC_OPUS,
 					"OPUS_HEADER=\"<opusfile.h>\"",
+				);
+				HEADER_SEARCH_PATHS = (
+					../src/codecs,
+					../include,
+					"$(HEADER_SEARCH_PATHS_QUOTED)",
+					"$(HOME)/Library/Frameworks/SDL2.framework/Headers",
+					../../SDL/include,
 				);
 				INFOPLIST_FILE = "Info-Framework.plist";
 				INSTALL_PATH = "@rpath";
