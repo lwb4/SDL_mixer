@@ -524,8 +524,7 @@
 				LastUpgradeCheck = 0900;
 				TargetAttributes = {
 					BE1FA8B407AF96B2004B6283 = {
-						DevelopmentTeam = D9BR8NFB7H;
-						ProvisioningStyle = Automatic;
+						ProvisioningStyle = Manual;
 					};
 				};
 			};
@@ -678,9 +677,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "Apple Development";
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_STYLE = Manual;
 				COMBINE_HIDPI_IMAGES = YES;
-				DEVELOPMENT_TEAM = D9BR8NFB7H;
+				DEVELOPMENT_TEAM = "";
 				DYLIB_COMPATIBILITY_VERSION = 3.0.0;
 				DYLIB_CURRENT_VERSION = 3.2.0;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -728,9 +727,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "Apple Development";
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_STYLE = Manual;
 				COMBINE_HIDPI_IMAGES = YES;
-				DEVELOPMENT_TEAM = D9BR8NFB7H;
+				DEVELOPMENT_TEAM = "";
 				DYLIB_COMPATIBILITY_VERSION = 3.0.0;
 				DYLIB_CURRENT_VERSION = 3.2.0;
 				FRAMEWORK_SEARCH_PATHS = (
